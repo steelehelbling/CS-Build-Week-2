@@ -4,12 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        arry = []
+        dic = set() #create a arry of nums that have been seen
         answer = False
         for n in nums:
-            if n not in arry: 
+            if n not in dic: #if you have seen
                 # print('true')
-                arry.append(n) 
+                dic.add(n)
             else: 
                 answer = True
                 # print('false')
